@@ -1,5 +1,6 @@
 package com.example.picturesharingapp
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,9 @@ import com.bumptech.glide.request.target.Target
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    var currentImageUrl: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         // Instantiate the RequestQueue.
         progressBar.visibility = View.VISIBLE
         val queue = Volley.newRequestQueue(this)
+        currentImageUrl = "https://meme-api.herokuapp.com/gimme"
         val url = "https://meme-api.herokuapp.com/gimme"
 
         // Request a string response from the provided URL.
@@ -70,7 +75,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun shareMeme(view: View) {
-
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT, "Epic funny meme lol $currentImageUrl")
+        val chooser = Intent.createChooser(intent, "Share this meme using")
+        startActivity(chooser)
     }
     fun nextMeme(view: View) {
         loadMeme()
