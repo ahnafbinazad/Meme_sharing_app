@@ -58,4 +58,4 @@ To share the data, intent is used
 An intent object is created called intent with an action to send 
 To put text with the meme url, I used intent.Extra and the url
 Added a chooser from intent to give options on to choose how to share text
-Added a type for the intent as plain text so that the data is shared as plain text![image](https://user-images.githubusercontent.com/66205903/190176269-2cb871d7-248c-4d73-8406-e757e0a6cf56.png)
+Added a type for the intent as plain text so that the data is shared as plain text
