@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
+        android:background="@color/black"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ProgressBar
@@ -35,10 +36,12 @@
         android:onClick="shareMeme"
         android:padding="15dp"
         android:text="@string/share"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
+        android:backgroundTint="@color/black"/>
 
     <Button
         android:id="@+id/nextButton"
@@ -47,10 +50,12 @@
         android:onClick="nextMeme"
         android:padding="15dp"
         android:text="@string/next"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
+        android:backgroundTint="@color/black"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
