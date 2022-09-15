@@ -13,7 +13,7 @@ This app uses API calls, useful libraries and the functionalities of Kotlin and 
 As this was a personal learning project, here is my notes of the process of this build:
 
 User interface:
-Created and empty page on android studio and selected the constraint layout, which is usually already selected
+Created an empty page on android studio and selected the constraint layout, which is usually already selected
 Added imageview fro the main image to be presented and added buttons underneath. 
 Added vertical and horizontal guidelines to align the buttons and imageview properly
 In the theme, changed the primary colours to give it a dark theme 
